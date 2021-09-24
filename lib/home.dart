@@ -1,3 +1,7 @@
+import 'package:backover/screens/detector.dart';
+import 'package:backover/screens/form.dart';
+import 'package:backover/screens/gallery.dart';
+import 'package:backover/screens/home.dart';
 import 'package:bubble_bottom_bar/bubble_bottom_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -19,18 +23,10 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: <Widget>[
-        Container(
-          color: Colors.green.shade100,
-        ),
-        Container(
-          color: Colors.orange.shade100,
-        ),
-        Container(
-          color: Colors.blue.shade100,
-        ),
-        Container(
-          color: Colors.black54,
-        ),
+        HomeScreen(),
+        DetectorScreen(),
+        FormScreen(),
+        GalleryScreen()
       ][currentIndex],
       bottomNavigationBar: BubbleBottomBar(
         opacity: 0.1,
@@ -40,40 +36,40 @@ class _HomeState extends State<Home> {
         elevation: 8,
         items: <BubbleBottomBarItem>[
           BubbleBottomBarItem(
-              backgroundColor: Colors.green.shade200,
+              backgroundColor: Colors.deepOrange,
               icon: Icon(
                 Icons.dashboard,
-                color: Colors.green.shade100,
+                color: Colors.deepOrange,
               ),
               activeIcon: Icon(
                 Icons.dashboard,
-                color: Colors.green.shade100,
+                color: Colors.deepOrange,
               ),
               title: Text("Home")),
           BubbleBottomBarItem(
-              backgroundColor: Colors.deepPurple,
+              backgroundColor: Colors.deepOrange,
               icon: Icon(
                 Icons.access_time,
-                color: Colors.deepPurple,
+                color: Colors.deepOrange,
               ),
               activeIcon: Icon(
                 Icons.access_time,
-                color: Colors.deepPurple,
+                color: Colors.deepOrange,
               ),
               title: Text("Logs")),
           BubbleBottomBarItem(
-              backgroundColor: Colors.indigo,
+              backgroundColor: Colors.deepOrange,
               icon: Icon(
                 Icons.folder_open,
-                color: Colors.black,
+                color: Colors.deepOrange,
               ),
               activeIcon: Icon(
                 Icons.folder_open,
-                color: Colors.indigo,
+                color: Colors.deepOrange,
               ),
               title: Text("Folders")),
           BubbleBottomBarItem(
-              backgroundColor: Colors.black,
+              backgroundColor: Colors.deepOrange,
               icon: Container(
                 height: 36,
                 width: 36,
