@@ -38,11 +38,11 @@ class _FormScreenState extends State<FormScreen> {
                   Container(
                     padding: EdgeInsets.fromLTRB(250.0, 150.0, 0.0, 0.0),
                     child: Text(
-                      '.',
+                      ' .',
                       style: TextStyle(
                           fontSize: 80.0,
                           fontWeight: FontWeight.bold,
-                          color: Colors.deepOrange),
+                          color: Colors.green),
                     ),
                   )
                 ],
@@ -75,7 +75,7 @@ class _FormScreenState extends State<FormScreen> {
             const SizedBox(height: 24),
             const SizedBox(height: 10),
             const SizedBox(height: 40),
-            Expanded(child: Center(child: buildSubmitButton())),
+            Center(child: buildSubmitButton())
             /*TextButton(
               onPressed: () {},
               child: Container(

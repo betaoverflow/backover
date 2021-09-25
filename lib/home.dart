@@ -39,40 +39,40 @@ class _HomeState extends State<Home> {
         elevation: 8,
         items: <BubbleBottomBarItem>[
           BubbleBottomBarItem(
-              backgroundColor: Colors.deepOrange,
+              backgroundColor: Colors.green,
               icon: Icon(
                 Icons.dashboard,
-                color: Colors.deepOrange,
+                color: Colors.green,
               ),
               activeIcon: Icon(
                 Icons.dashboard,
-                color: Colors.deepOrange,
+                color: Colors.green,
               ),
               title: Text("Home")),
           BubbleBottomBarItem(
-              backgroundColor: Colors.deepOrange,
+              backgroundColor: Colors.green,
               icon: Icon(
                 Icons.access_time,
-                color: Colors.deepOrange,
+                color: Colors.green,
               ),
               activeIcon: Icon(
                 Icons.access_time,
-                color: Colors.deepOrange,
+                color: Colors.green,
               ),
               title: Text("Logs")),
           BubbleBottomBarItem(
-              backgroundColor: Colors.deepOrange,
+              backgroundColor: Colors.green,
               icon: Icon(
                 Icons.folder_open,
-                color: Colors.deepOrange,
+                color: Colors.green,
               ),
               activeIcon: Icon(
                 Icons.folder_open,
-                color: Colors.deepOrange,
+                color: Colors.green,
               ),
               title: Text("Folders")),
           BubbleBottomBarItem(
-              backgroundColor: Colors.deepOrange,
+              backgroundColor: Colors.green,
               icon: Container(
                 height: 36,
                 width: 36,
