@@ -137,21 +137,11 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-<<<<<<< HEAD
-  http:
+  flutter_web_plugins:
     dependency: transitive
-    description:
-      name: http
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.12.2"
-  http_parser:
-    dependency: transitive
-    description:
-      name: http_parser
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "3.1.4"
+    description: flutter
+    source: sdk
+    version: "0.0.0"
   image:
     dependency: "direct main"
     description:
@@ -165,20 +155,7 @@ packages:
       name: image_picker
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.6.7+22"
-  image_picker_platform_interface:
-    dependency: transitive
-    description:
-      name: image_picker_platform_interface
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.1.6"
-=======
-  flutter_web_plugins:
-    dependency: transitive
-    description: flutter
-    source: sdk
-    version: "0.0.0"
+    version: "0.6.5+3"
   js:
     dependency: transitive
     description:
@@ -186,7 +163,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.6.3"
->>>>>>> 94b9beff11a85faf34bc36ba5ca4073bd4bdc108
   matcher:
     dependency: transitive
     description:
@@ -208,22 +184,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.8.0"
-<<<<<<< HEAD
-  pedantic:
-    dependency: transitive
-    description:
-      name: pedantic
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.11.1"
-  petitparser:
-    dependency: transitive
-    description:
-      name: petitparser
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "3.1.0"
-=======
   path_provider_linux:
     dependency: transitive
     description:
@@ -245,6 +205,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.3"
+  petitparser:
+    dependency: transitive
+    description:
+      name: petitparser
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "3.1.0"
   platform:
     dependency: transitive
     description:
@@ -252,16 +219,12 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "3.0.2"
->>>>>>> 94b9beff11a85faf34bc36ba5ca4073bd4bdc108
   plugin_platform_interface:
     dependency: transitive
     description:
       name: plugin_platform_interface
       url: "https://pub.dartlang.org"
     source: hosted
-<<<<<<< HEAD
-    version: "1.0.3"
-=======
     version: "2.0.1"
   process:
     dependency: transitive
@@ -312,7 +275,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.2"
->>>>>>> 94b9beff11a85faf34bc36ba5ca4073bd4bdc108
   sky_engine:
     dependency: transitive
     description: flutter
@@ -359,8 +321,7 @@ packages:
       name: test_api
       url: "https://pub.dartlang.org"
     source: hosted
-<<<<<<< HEAD
-    version: "0.3.0"
+    version: "0.4.2"
   tflite:
     dependency: "direct main"
     description:
@@ -368,9 +329,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.1.2"
-=======
-    version: "0.4.2"
->>>>>>> 94b9beff11a85faf34bc36ba5ca4073bd4bdc108
   typed_data:
     dependency: transitive
     description:
@@ -385,18 +343,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.0"
-<<<<<<< HEAD
-  xml:
-    dependency: transitive
-    description:
-      name: xml
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "4.5.1"
-sdks:
-  dart: ">=2.12.0 <3.0.0"
-  flutter: ">=1.12.13"
-=======
   win32:
     dependency: transitive
     description:
@@ -411,7 +357,13 @@ sdks:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.2.0"
+  xml:
+    dependency: transitive
+    description:
+      name: xml
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "4.5.1"
 sdks:
   dart: ">=2.14.0 <3.0.0"
   flutter: ">=2.5.0"
->>>>>>> 94b9beff11a85faf34bc36ba5ca4073bd4bdc108

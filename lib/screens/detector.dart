@@ -14,8 +14,8 @@ class DetectorScreen extends StatefulWidget {
 }
 
 class _DetectorScreenState extends State<DetectorScreen> {
-  late File _image;
-  late List _recognitions;
+  File? _image;
+  List? _recognitions;
   String diseaseName = "";
   bool _busy = false;
 
@@ -51,7 +51,8 @@ class _DetectorScreenState extends State<DetectorScreen> {
   }
 
   Future<void> predictImagePickerGallery(BuildContext context) async {
-    var image = await ImagePicker.pickImage(source: ImageSource.gallery);
+    dynamic image = await ImagePicker.pickImage(source: ImageSource.gallery);
+
     if (image == null) return;
     setState(() {
       _busy = true;
@@ -62,7 +63,7 @@ class _DetectorScreenState extends State<DetectorScreen> {
   }
 
   Future<void> predictImagePickerCamera(BuildContext context) async {
-    var image = await ImagePicker.pickImage(source: ImageSource.camera);
+    dynamic image = await ImagePicker.pickImage(source: ImageSource.camera);
     if (image == null) return;
     setState(() {
       _busy = true;
@@ -97,7 +98,7 @@ class _DetectorScreenState extends State<DetectorScreen> {
   }
 
   Future recognizeImage(File image) async {
-    var recognitions = await Tflite.runModelOnImage(
+    dynamic recognitions = await Tflite.runModelOnImage(
       path: image.path,
       numResults: 6,
       threshold: 0.05,
@@ -125,13 +126,15 @@ class _DetectorScreenState extends State<DetectorScreen> {
       top: 0.0,
       left: 0.0,
       width: size.width,
-      child: _image == null ? Text('No image selected.') : Image.file(_image),
+      // ignore: unnecessary_null_comparison
+      child: _image == null ? Text('No image selected.') : Image.file(_image!),
     ));
 
     stackChildren.add(Center(
       child: Column(
+        // ignore: unnecessary_null_comparison
         children: _recognitions != null
-            ? _recognitions.map((res) {
+            ? _recognitions!.map((res) {
                 diseaseName = res['label'];
                 return Text(
                   "${res["index"]} - ${res["label"]}",
@@ -146,15 +149,18 @@ class _DetectorScreenState extends State<DetectorScreen> {
       ),
     ));
 
+    // ignore: unnecessary_null_comparison
     if (_image != null) {
       stackChildren.add(Positioned(
         bottom: 100.0,
         left: 140.0,
 //        width: size.width,
-        child: RaisedButton(
+        child: ElevatedButton(
           onPressed: handleCure,
           child: Text('Cure'),
-          color: Colors.blue,
+          style: ElevatedButton.styleFrom(
+            primary: Colors.blue
+          ),
         ),
       ));
     }
