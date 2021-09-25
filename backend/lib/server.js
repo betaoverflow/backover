@@ -1,6 +1,7 @@
 const express = require("express");
 require("dotenv").config();
 
+// database connection
 const database = require("../database/db");
 
 // middlewares
