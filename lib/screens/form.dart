@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:backover/widgets/button.dart';
 
 class FormScreen extends StatefulWidget {
   @override
@@ -37,11 +38,11 @@ class _FormScreenState extends State<FormScreen> {
                   Container(
                     padding: EdgeInsets.fromLTRB(250.0, 150.0, 0.0, 0.0),
                     child: Text(
-                      '.',
+                      ' .',
                       style: TextStyle(
                           fontSize: 80.0,
                           fontWeight: FontWeight.bold,
-                          color: Colors.deepOrange),
+                          color: Colors.green),
                     ),
                   )
                 ],
@@ -74,7 +75,8 @@ class _FormScreenState extends State<FormScreen> {
             const SizedBox(height: 24),
             const SizedBox(height: 10),
             const SizedBox(height: 40),
-            TextButton(
+            Center(child: buildSubmitButton())
+            /*TextButton(
               onPressed: () {},
               child: Container(
                   height: 40.0,
@@ -96,15 +98,13 @@ class _FormScreenState extends State<FormScreen> {
                       ),
                     ),
                   )),
-            ),
+            ),*/
           ]),
     );
   }
-}
 
-// Widget buildUserButton() => ButtonWidget(
-//       text: 'Submit',
-//       onClicked: () {
-//
-//       },
-//     );
+  Widget buildSubmitButton() => ButtonWidget(
+        text: 'SUBMIT',
+        onClicked: () {},
+      );
+}

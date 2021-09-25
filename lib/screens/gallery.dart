@@ -30,37 +30,37 @@ class _GalleryScreenState extends State<GalleryScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.orange,
+      backgroundColor: Colors.green[400],
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             SizedBox(
-              height: 40,
+              height: 50,
             ),
             Text(
               "$titleName",
               style: TextStyle(
-                fontSize: 25,
-                fontWeight: FontWeight.w600,
+                fontSize: 35,
+                fontWeight: FontWeight.w900,
                 color: Colors.white,
               ),
               textAlign: TextAlign.center,
             ),
             SizedBox(
-              height: 40,
+              height: 50,
             ),
             Expanded(
               child: Container(
                 padding: EdgeInsets.symmetric(
                   horizontal: 20,
-                  vertical: 30,
+                  vertical: 50,
                 ),
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: Colors.green[100],
                   borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(30),
-                    topRight: Radius.circular(30),
+                    topLeft: Radius.circular(60),
+                    topRight: Radius.circular(60),
                   ),
                 ),
                 child: GridView.builder(

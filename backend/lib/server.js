@@ -1,6 +1,7 @@
 const express = require("express");
 require("dotenv").config();
 
+// database connection
 const database = require("../database/db");
 
 // middlewares
@@ -12,9 +13,8 @@ app.use(express.json());
 const port = process.env.PORT;
 
 // routes
-app.get("/", (req, res, next) => {
-  return res.json({ teamName: "Betaoverflow" });
-});
+var routes = require("../routes/routes");
+app.use("/", routes);
 
 app.listen(port, () => {
   console.log("Server running at " + port);
