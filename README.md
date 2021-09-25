@@ -43,7 +43,7 @@ Your appreciation makes us grow and glow up. ⭐
 
 
 ## Accomplishments that we're proud of 😎
-
+Firstly, we were able to learn so much in just one day including an entire tech stack i.e. app development using Flutter. Along with that we made a lot of features that we didn't even think would be possible to do and we had so much fun creating them. But most importantly, we understand the dilema people face while choosing the correct vendor and design from the set of 10 designs for their backyard , and also save those who keeps us alive - plants! . And this is our biggest achievement. It feels great creating something which can actually help someone and make an impact on someone's life.
 
 ## What we learned 🤓
 
