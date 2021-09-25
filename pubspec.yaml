@@ -22,6 +22,9 @@ environment:
 
 dependencies:
   bubble_bottom_bar: ^1.2.0
+  image_picker: ^0.6.5+2
+  image: ^2.1.4
+  tflite: ^1.0.5
   flutter:
     sdk: flutter
 
