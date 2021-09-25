@@ -46,10 +46,6 @@ class _ArAreaCalculatorState extends State<ArAreaCalculator> {
   void _onArCoreViewCreated(ArCoreController controller) {
     arCoreController = controller;
 
-    // _addSphere(arCoreController);
-    // _addCylindre(arCoreController);
-    // _addCube(arCoreController);
-
     arCoreController.onNodeTap = (name) => onTapHandler(name);
     arCoreController.onPlaneTap = _onPlaneTapHandler;
   }
@@ -98,7 +94,7 @@ class _ArAreaCalculatorState extends State<ArAreaCalculator> {
     }
 
     for (int i = 0; i < n - 1; i++) {
-      det += (pts[i].dy * pts[i + 1].dx);
+      det -= (pts[i].dy * pts[i + 1].dx);
     }
 
     det = det.abs();
