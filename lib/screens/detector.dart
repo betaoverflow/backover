@@ -174,9 +174,6 @@ class _DetectorScreenState extends State<DetectorScreen> {
     }
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Plant Disease Recognition'),
-      ),
       body: Stack(
         children: stackChildren,
       ),
