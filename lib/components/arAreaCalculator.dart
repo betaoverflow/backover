@@ -1,5 +1,7 @@
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:arcore_flutter_plugin/arcore_flutter_plugin.dart';
+import 'package:backover/screens/suggestions.dart';
+import 'package:backover/utils/imagePreferences.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:vector_math/vector_math_64.dart' as vector;
@@ -80,7 +82,7 @@ class _ArAreaCalculatorState extends State<ArAreaCalculator> {
     );
   }
 
-  void shoeLace() async {
+  void shoeLace() {
     hitToDimensions();
 
     if (points.length < 3) {
@@ -106,14 +108,15 @@ class _ArAreaCalculatorState extends State<ArAreaCalculator> {
 
     det = det.abs();
     det /= 2;
+    det = metreSquareToFeetSquare(det);
 
     // store area to local storage
-    final prefs = await SharedPreferences.getInstance();
-    prefs.setDouble('area', det);
+    // final prefs = await SharedPreferences.getInstance();
+    // prefs.setDouble('area', det);
+    //
+    fillImagesWithArea(images, det);
 
-    setState(() {
-      area = metreSquareToFeetSquare(det);
-    });
+    Navigator.push(context, MaterialPageRoute(builder: (context) => Suggestions(area: det)));
   }
 
   void _onPlaneTapHandler(List<ArCoreHitTestResult> hits) {

@@ -4,7 +4,7 @@ class ImageDetails {
   final String photographer;
   final String title;
   final String details;
-  var area;
+  final double area;
 
   ImageDetails({
     required this.imagePath,
@@ -12,6 +12,6 @@ class ImageDetails {
     required this.photographer,
     required this.title,
     required this.details,
-    this.area
+    required this.area
   });
 }

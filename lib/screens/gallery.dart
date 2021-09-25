@@ -82,6 +82,7 @@ class _GalleryScreenState extends State<GalleryScreen> {
                               price: backyards[index].price,
                               details: backyards[index].details,
                               index: index,
+                              area: backyards[index].area,
                             ),
                           ),
                         );

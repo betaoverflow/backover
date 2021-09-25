@@ -12,6 +12,6 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(child: Suggestions(area: 23));
+    return SafeArea(child: ArAreaCalculator());
   }
 }

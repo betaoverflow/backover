@@ -7,13 +7,17 @@ class DetailsPage extends StatelessWidget {
   final String price;
   final String details;
   final int index;
+  final double area;
+
   DetailsPage(
       {required this.imagePath,
       required this.title,
       required this.photographer,
       required this.price,
       required this.details,
-      required this.index});
+      required this.index,
+      required this.area
+      });
   @override
   @override
   Widget build(BuildContext context) {
@@ -64,6 +68,14 @@ class DetailsPage extends StatelessWidget {
                         ),
                         Text(
                           price,
+                          style: TextStyle(
+                            color: Colors.orange,
+                            fontSize: 18,
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
+                        Text(
+                          "Area: $area sq. ft",
                           style: TextStyle(
                             color: Colors.orange,
                             fontSize: 18,
