@@ -1,13 +1,13 @@
-const mongoose = require("mongoose");
+const mongoose= require('mongoose');
 
-var photo = mongoose.model("photo", {
-  area: { type: String },
-  location: { type: String },
-  creative: {
-      data: Buffer,
-      contentType: String
-  },
-  isApproved: { type: Boolean, default: false },
-});
+const imageSchema= mongoose.Schema(
+    {
+        image:{
+            type: String,
+            required: true
+        }
+    }
+);
 
-module.exports = { photo };
+
+module.exports=mongoose.model("Images",imageSchema)

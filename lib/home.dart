@@ -2,6 +2,7 @@ import 'package:backover/screens/detector.dart';
 import 'package:backover/screens/form.dart';
 import 'package:backover/screens/gallery.dart';
 import 'package:backover/screens/home.dart';
+import 'package:backover/screens/newForm.dart';
 import 'package:backover/utils/imagePreferences.dart';
 
 // ignore: import_of_legacy_library_into_null_safe
@@ -30,6 +31,7 @@ class _HomeState extends State<Home> {
         HomeScreen(),
         DetectorScreen(),
         FormScreen(),
+        ImageUpload(),
         GalleryScreen(cols: 3, titleName: "Gallery", backyards: images)
       ][currentIndex],
       bottomNavigationBar: BubbleBottomBar(
@@ -61,6 +63,17 @@ class _HomeState extends State<Home> {
                 color: Colors.green,
               ),
               title: Text("Logs")),
+          BubbleBottomBarItem(
+              backgroundColor: Colors.green,
+              icon: Icon(
+                Icons.folder_open,
+                color: Colors.green,
+              ),
+              activeIcon: Icon(
+                Icons.folder_open,
+                color: Colors.green,
+              ),
+              title: Text("Folders")),
           BubbleBottomBarItem(
               backgroundColor: Colors.green,
               icon: Icon(
