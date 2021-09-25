@@ -19,7 +19,7 @@ class _ImageUploadState extends State<ImageUpload> {
   final picker = ImagePicker();
 
   Future<void> getImage() async {
-    final pickedFile = await picker.getImage(source: ImageSource.gallery);
+    dynamic pickedFile = await picker.getImage(source: ImageSource.gallery);
 
     setState(() {
       if (pickedFile != null) {
@@ -38,7 +38,7 @@ class _ImageUploadState extends State<ImageUpload> {
     var length = await imageFile.length();
 
     // string to uri
-    var uri = Uri.parse("http://localhost:8080/upload");
+    var uri = Uri.parse("http://10.0.2.2:8080/upload");
 
     // create multipart request
     var request = new http.MultipartRequest("POST", uri);
@@ -63,7 +63,7 @@ class _ImageUploadState extends State<ImageUpload> {
   bool isloaded = false;
   var result;
   fetch() async {
-    var response = await http.get('http://localhost:8080/image');
+    var response = await http.get('http://10.0.2.2:8080/image');
     result = jsonDecode(response.body);
     print(result[0]['image']);
     setState(() {
@@ -91,7 +91,7 @@ class _ImageUploadState extends State<ImageUpload> {
               icon: Icon(Icons.upload_rounded),
               label: Text("Upload now")),
           isloaded
-              ? Image.network('http://localhost:8080/${result[0]['image']}')
+              ? Image.network('http://10.0.2.2:8080/${result[0]['image']}')
               : CircularProgressIndicator(),
         ],
       ),
