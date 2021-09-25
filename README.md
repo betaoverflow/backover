@@ -36,7 +36,7 @@ Your appreciation makes us grow and glow up. ⭐
 
 
 
-## How we built it 🧑‍💻
+## How we built it 🤖
 
 
 ## Challenges we ran into 🥺
@@ -49,6 +49,18 @@ Your appreciation makes us grow and glow up. ⭐
 
 
 ## Built With 💕
+- [ ] Flutter
+- [ ] Dart
+- [ ] Nodejs
+- [ ] Javascript
+- [ ] Vuejs
+- [ ] Express
+- [ ] MongoDB
+- [ ] Tensorflow
+- [ ] Keras
+- [ ] Arcore
+- [ ] Jupyter Notebook
+- [ ] Cloudinary
 
 
 
