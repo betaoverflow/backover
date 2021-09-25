@@ -1,6 +1,9 @@
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:arcore_flutter_plugin/arcore_flutter_plugin.dart';
+import 'package:backover/screens/suggestions.dart';
+import 'package:backover/utils/imagePreferences.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:vector_math/vector_math_64.dart' as vector;
 
 class ArAreaCalculator extends StatefulWidget {
@@ -31,7 +34,7 @@ class _ArAreaCalculatorState extends State<ArAreaCalculator> {
           Expanded(
             flex: 1,
             child: Wrap(spacing: 32.0, children: [
-              Text("$area"),
+              Text("$area sq. ft"),
               ElevatedButton(
                 child: const Text("press"),
                 onPressed: shoeLace,
@@ -61,16 +64,20 @@ class _ArAreaCalculatorState extends State<ArAreaCalculator> {
   var points = <ArCoreHitTestResult>[];
   var pts = <Dimensions>[];
 
+  double metreSquareToFeetSquare(double x) {
+    return x * 10.764;
+  }
+
   void hitToDimensions() {
     for (int i = 0; i < points.length; i++) {
       double dx = points[i].pose.translation.x;
-      double dy = points[i].pose.translation.y;
+      double dz = points[i].pose.translation.z;
 
-      pts.add(Dimensions(dx, dy));
+      pts.add(Dimensions(dx, dz));
     }
 
     pts.add(Dimensions(points[0].pose.translation.x * 1.0,
-        points[0].pose.translation.y * 1.0));
+        points[0].pose.translation.z * 1.0));
   }
 
   void shoeLace() {
@@ -90,19 +97,25 @@ class _ArAreaCalculatorState extends State<ArAreaCalculator> {
 
     /** add product of x coordinate of ith point with y coordinate of (i + 1)th point **/
     for (int i = 0; i < n - 1; i++) {
-      det += (pts[i].dx * pts[i + 1].dy);
+      det += (pts[i].dx * pts[i + 1].dz);
     }
 
     for (int i = 0; i < n - 1; i++) {
-      det -= (pts[i].dy * pts[i + 1].dx);
+      det -= (pts[i].dz * pts[i + 1].dx);
     }
 
     det = det.abs();
     det /= 2;
+    det = metreSquareToFeetSquare(det);
 
-    setState(() {
-      area = det;
-    });
+    // store area to local storage
+    // final prefs = await SharedPreferences.getInstance();
+    // prefs.setDouble('area', det);
+    //
+    fillImagesWithArea(images, det);
+
+    Navigator.push(context,
+        MaterialPageRoute(builder: (context) => Suggestions(area: det)));
   }
 
   void _onPlaneTapHandler(List<ArCoreHitTestResult> hits) {
@@ -148,7 +161,7 @@ class _ArAreaCalculatorState extends State<ArAreaCalculator> {
 
 class Dimensions {
   final double dx;
-  final double dy;
+  final double dz;
 
-  Dimensions(this.dx, this.dy);
+  Dimensions(this.dx, this.dz);
 }
