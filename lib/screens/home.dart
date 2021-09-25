@@ -1,4 +1,5 @@
 import 'package:backover/components/arAreaCalculator.dart';
+import 'package:backover/screens/suggestions.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -11,6 +12,6 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(child: ArAreaCalculator());
+    return SafeArea(child: Suggestions(area: 23));
   }
 }
