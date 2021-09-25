@@ -1,8 +1,9 @@
 
 <p align='center'><img src='https://res.cloudinary.com/dguy8qpzi/image/upload/v1632501398/backoverLogo_wawqva.png' width="150" ></p>
 <h1 align='center'> Backover</h1>
-<p align='center'>
 
+<p align='center'>
+<img src='http://ForTheBadge.com/images/badges/built-by-developers.svg'>&nbsp;<img src='http://ForTheBadge.com/images/badges/built-with-love.svg'>
 </p>
 
 ## What is it? ⛹️‍♂️
