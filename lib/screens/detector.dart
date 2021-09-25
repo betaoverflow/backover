@@ -107,7 +107,7 @@ class _DetectorScreenState extends State<DetectorScreen> {
     );
     setState(() {
       _busy = false;
-      _recognitions = recognitions;
+      _recognitions = recognitions!;
     });
   }
 

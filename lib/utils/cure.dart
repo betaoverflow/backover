@@ -77,7 +77,7 @@ class Cure extends StatelessWidget {
       body: Column(
         children: <Widget>[
           Expanded(
-            child: Text("$disease![diseaseName]"),
+            child: Text(disease[diseaseName]!),
           ),
         ],
       ),
