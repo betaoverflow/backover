@@ -12,9 +12,8 @@ app.use(express.json());
 const port = process.env.PORT;
 
 // routes
-app.get("/", (req, res, next) => {
-  return res.json({ teamName: "Betaoverflow" });
-});
+var routes = require("../routes/routes");
+app.use("/", routes);
 
 app.listen(port, () => {
   console.log("Server running at " + port);
