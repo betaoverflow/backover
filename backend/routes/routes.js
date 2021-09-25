@@ -1,6 +1,10 @@
 const express = require("express");
 var router = express.Router();
 var ObjectId = require("mongoose").Types.ObjectId;
+ 
+var fs = require('fs');
+
+var path = require('path')
 
 var { photo } = require("../model/photo");
 
@@ -12,7 +16,9 @@ router.get("/", (req, res, next) => {
 // get all photos
 router.get("/gallery", (req, res, next) => {
   photo.find((err, response) => {
-    if (!err) res.send(response);
+    if (!err) {
+      res.send(response);
+    }
     else
       console.log(
         "Error while retrieving all photos for gallery" +
@@ -26,7 +32,8 @@ router.post("/gallery", (req, res, next) => {
   var newPhoto = new photo({
     area: req.body.area,
     location: req.body.location,
-    creative: req.body.creative,
+    creative: {data: 'data:image/png;base64,' + (fs.readFileSync(path.join(__dirname + '/uploads/' + req.body.filename))).toString("base64"),
+    contentType: 'image/jpg'}
   });
   newPhoto.save((err, response) => {
     if (!err) res.send(response);
