@@ -52,7 +52,7 @@ class DetailsPage extends StatelessWidget {
                           Text(
                             title,
                             style: TextStyle(
-                              color: Colors.orange,
+                              color: Colors.green,
                               fontSize: 22,
                               fontWeight: FontWeight.w600,
                             ),
@@ -66,7 +66,7 @@ class DetailsPage extends StatelessWidget {
                           Text(
                             price,
                             style: TextStyle(
-                              color: Colors.orange,
+                              color: Colors.green,
                               fontSize: 18,
                               fontWeight: FontWeight.w400,
                             ),
