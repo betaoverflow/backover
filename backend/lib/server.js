@@ -1,6 +1,8 @@
 const express = require("express");
 require("dotenv").config();
 
+const database = require("../database/db");
+
 // middlewares
 const app = express();
 app.use(express.urlencoded({ extended: true }));
