@@ -17,8 +17,8 @@ class DetailsPage extends StatelessWidget {
       required this.price,
       required this.details,
       required this.index,
-      required this.area
-      });
+      required this.area});
+
   @override
   @override
   Widget build(BuildContext context) {
@@ -75,22 +75,22 @@ class DetailsPage extends StatelessWidget {
                               fontWeight: FontWeight.w400,
                             ),
                           ),
-                        ),
-                        Text(
-                          "Area: $area sq. ft",
-                          style: TextStyle(
-                            color: Colors.orange,
-                            fontSize: 18,
-                            fontWeight: FontWeight.w400,
+                          Text(
+                            "Area: $area sq. ft",
+                            style: TextStyle(
+                              color: Colors.green,
+                              fontSize: 18,
+                              fontWeight: FontWeight.w400,
+                            ),
                           ),
-                        ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Text(
-                          details,
-                          style: TextStyle(
-                            fontSize: 14,
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Text(
+                            details,
+                            style: TextStyle(
+                              fontSize: 14,
+                            ),
                           ),
                         ],
                       ),
