@@ -46,7 +46,7 @@ Your appreciation makes us grow and glow up. ⭐
 Firstly, we were able to learn so much in just one day including an entire tech stack i.e. app development using Flutter. Along with that we made a lot of features that we didn't even think would be possible to do and we had so much fun creating them. But most importantly, we understand the dilema people face while choosing the correct vendor and design from the set of 10 designs for their backyard , and also save those who keeps us alive - plants! . And this is our biggest achievement. It feels great creating something which can actually help someone and make an impact on someone's life.
 
 ## What we learned 🤓
-
+Being a group of javascript developers, we tried our hands on Flutter this time. We learnt how to create an onboarding screen, proper navigation, optimize controllers and make API calls. It was the first time we tried to connect node backend with mongodb with flutter, moreover we also tried to build our own detector model while taking data from kaggel and keras as the backend with tensorflow. In addition to that , we learned how to connect tensorflow lite with dart and use image picker to it's full extent! 
 
 ## Built With 💕
 - [ ] Flutter
