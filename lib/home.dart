@@ -2,7 +2,10 @@ import 'package:backover/screens/detector.dart';
 import 'package:backover/screens/form.dart';
 import 'package:backover/screens/gallery.dart';
 import 'package:backover/screens/home.dart';
+
+// ignore: import_of_legacy_library_into_null_safe
 import 'package:bubble_bottom_bar/bubble_bottom_bar.dart';
+
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
