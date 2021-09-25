@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class Cure extends StatelessWidget {
   String diseaseName;
   Cure(this.diseaseName);
@@ -76,7 +77,7 @@ class Cure extends StatelessWidget {
       body: Column(
         children: <Widget>[
           Expanded(
-            child: Text(disease[diseaseName]),
+            child: Text(disease[diseaseName]!),
           ),
         ],
       ),
