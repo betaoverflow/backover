@@ -2,6 +2,7 @@
 import 'package:arcore_flutter_plugin/arcore_flutter_plugin.dart';
 import 'package:backover/screens/suggestions.dart';
 import 'package:backover/utils/imagePreferences.dart';
+import 'package:backover/widgets/button.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:vector_math/vector_math_64.dart' as vector;
@@ -21,8 +22,18 @@ class _ArAreaCalculatorState extends State<ArAreaCalculator> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        backgroundColor: Colors.green[100],
         appBar: AppBar(
-          title: const Text('Hello World'),
+          backgroundColor: Colors.green,
+          title: const Text(
+            'AR Area Calculator',
+            style: TextStyle(
+              fontSize: 24,
+              fontWeight: FontWeight.w900,
+              color: Colors.white,
+            ),
+            textAlign: TextAlign.center,
+          ),
         ),
         body: Column(children: [
           Expanded(
@@ -33,13 +44,15 @@ class _ArAreaCalculatorState extends State<ArAreaCalculator> {
               )),
           Expanded(
             flex: 1,
-            child: Wrap(spacing: 32.0, children: [
-              Text("$area sq. ft"),
-              ElevatedButton(
-                child: const Text("press"),
-                onPressed: shoeLace,
-              ),
-            ]),
+            child: Column(
+              children: [
+                Text("click after selecting at least two points"),
+                ButtonWidget(
+                  text: "show suggestions",
+                  onClicked: shoeLace,
+                )
+              ],
+            ),
           )
         ]),
       ),
@@ -136,7 +149,7 @@ class _ArAreaCalculatorState extends State<ArAreaCalculator> {
     // );
 
     final earthMaterial =
-        ArCoreMaterial(color: const Color.fromARGB(120, 66, 134, 244));
+    ArCoreMaterial(color: const Color.fromARGB(120, 66, 134, 244));
 
     final earthShape = ArCoreSphere(
       materials: [earthMaterial],
