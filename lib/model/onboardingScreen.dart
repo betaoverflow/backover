@@ -10,12 +10,12 @@ List<OnboardingModel> onboardingContent = [
   OnboardingModel(
       title: 'Welcome to A',
       image:
-          'https://res.cloudinary.com/dguy8qpzi/image/upload/v1632546428/backover-1_qbzqax.png',
+          'https://res.cloudinary.com/dxmxhyzsy/image/upload/v1632625953/onboard2_jfbnid.png',
       descp: "Let's make over your backyard with the power of community"),
   OnboardingModel(
       title: 'Welcome to B',
       image:
-          'https://res.cloudinary.com/dguy8qpzi/image/upload/v1632546428/backover-1_qbzqax.png',
+          'https://res.cloudinary.com/dxmxhyzsy/image/upload/v1632625944/onboard1_okbrrs.png',
       descp: "Let's make over your backyard with the power of community"),
   OnboardingModel(
       title: 'Welcome to C',
