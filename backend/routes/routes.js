@@ -48,14 +48,8 @@ var storage = multer.diskStorage({
      error.httpStatusCode = 400
      return next("hey error")
    }
-     
-     
-     const imagepost= new model({
-       image: file.path
-     })
-     const savedimage= await imagepost.save()
-     res.json(savedimage)
-   
+
+     res.json({filename: file.filename});
  })
 
  router.get('/image',async(req, res)=>{

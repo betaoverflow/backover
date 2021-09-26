@@ -18,6 +18,7 @@ class _SuggestionsState extends State<Suggestions> {
 
   @override
   Widget build(BuildContext context) {
-    return GalleryScreen(cols: 1, titleName: "Suggestions", backyards: suggestedImages);
+    var areaString = double.parse(area.toStringAsFixed(2));
+    return GalleryScreen(cols: 1, titleName: "Suggestions for \n $areaString sq. ft", backyards: suggestedImages);
   }
 }
