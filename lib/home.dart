@@ -51,7 +51,7 @@ class _HomeState extends State<Home> {
                 Icons.home_rounded,
                 color: Colors.green,
               ),
-              title: Text("Home")),
+              title: Text("Scan")),
           BubbleBottomBarItem(
               backgroundColor: Colors.green,
               icon: Icon(
@@ -62,7 +62,7 @@ class _HomeState extends State<Home> {
                 Icons.access_time_filled_rounded,
                 color: Colors.green,
               ),
-              title: Text("Logs")),
+              title: Text("Detect")),
           BubbleBottomBarItem(
               backgroundColor: Colors.green,
               icon: Icon(
@@ -73,35 +73,46 @@ class _HomeState extends State<Home> {
                 Icons.snippet_folder_sharp,
                 color: Colors.green,
               ),
-              title: Text("Folders")),
+              title: Text("Form")),
           BubbleBottomBarItem(
               backgroundColor: Colors.green,
               icon: Icon(
-                Icons.upload_file,
+                Icons.add_photo_alternate_outlined,
                 color: Colors.green,
               ),
               activeIcon: Icon(
-                Icons.upload_file_rounded,
+                Icons.add_photo_alternate,
                 color: Colors.green,
               ),
               title: Text("Upload")),
           BubbleBottomBarItem(
               backgroundColor: Colors.green,
-              icon: Container(
-                height: 36,
-                width: 36,
-                decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    image: DecorationImage(
-                        image: AssetImage('assets/profile.png')),
-                    boxShadow: [
-                      BoxShadow(
-                          color: Color(0x5c00000),
-                          offset: Offset(0, 1),
-                          blurRadius: 5)
-                    ]),
+              icon: Icon(
+                Icons.photo_camera_back,
+                color: Colors.green,
               ),
-              title: Text("Profiles"))
+              activeIcon: Icon(
+                Icons.photo_camera_back_rounded,
+                color: Colors.green,
+              ),
+              title: Text("Gallery")),
+          // BubbleBottomBarItem(
+          //     backgroundColor: Colors.green,
+          //     icon: Container(
+          //       height: 36,
+          //       width: 36,
+          //       decoration: BoxDecoration(
+          //           shape: BoxShape.circle,
+          //           image: DecorationImage(
+          //               image: AssetImage('assets/profile.png')),
+          //           boxShadow: [
+          //             BoxShadow(
+          //                 color: Color(0x5c00000),
+          //                 offset: Offset(0, 1),
+          //                 blurRadius: 5)
+          //           ]),
+          //     ),
+          //     title: Text("Gallery"))
         ],
       ),
     );
