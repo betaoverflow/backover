@@ -75,52 +75,60 @@ class _ImageUploadState extends State<ImageUpload> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.green[50],
-      body: Stack(
-        children: <Widget>[
-          Container(
-            height: 360,
-            decoration: BoxDecoration(
-              color: Colors.green,
-              borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(500.0),
-                  bottomRight: Radius.circular(160.0)),
+        backgroundColor: Colors.green[50],
+        body: Stack(
+          children: <Widget>[
+            Container(
+              height: 360,
+              decoration: BoxDecoration(
+                color: Colors.green,
+                borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(500.0),
+                    bottomRight: Radius.circular(160.0)),
+              ),
             ),
-          ),
-          Container(
-            margin: const EdgeInsets.only(top: 150),
-            child: Column(
-              children: <Widget>[
-                Padding(
-                  padding: const EdgeInsets.all(9.0),
-                  child: Center(
-                    child: Text(
-                      "Select an Image",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 35,
-                          fontStyle: FontStyle.italic,
-                          fontWeight: FontWeight.w500),
+            Container(
+                margin: const EdgeInsets.only(top: 150),
+                child: Column(children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.all(9.0),
+                    child: Center(
+                      child: Text(
+                        "Select an Image",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 35,
+                            fontStyle: FontStyle.italic,
+                            fontWeight: FontWeight.w500),
+                      ),
                     ),
                   ),
-                ),
-                SizedBox(
-                  height: 250,
-                ),
-                SizedBox(
-                    child: Column(children: [
-                  Text(""),
-                  FlatButton.icon(
-                    onPressed: () async => await getImage(),
-                    icon: Icon(
-                      Icons.folder_open_rounded,
-                      size: 60,
-                    ),
-                    label: Text(
-                      'Browse',
-                      textAlign: TextAlign.center,
-                      style:
-                          TextStyle(fontSize: 40, fontWeight: FontWeight.w400),
+                  SizedBox(height: 280),
+                  Center(
+                    child: SizedBox(
+                      height: 50,
+                      width: 120,
+                      child: TextButton.icon(
+                        style: TextButton.styleFrom(
+                          textStyle: TextStyle(
+                              color: Colors.green, fontWeight: FontWeight.w500),
+                          backgroundColor: Colors.green[100],
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(25.0),
+                          ),
+                        ),
+                        onPressed: () async => await getImage(),
+                        icon: Icon(
+                          Icons.folder_open_rounded,
+                          color: Colors.green,
+                        ),
+                        label: Text(
+                          'Browse',
+                          style: TextStyle(
+                            color: Colors.black,
+                          ),
+                        ),
+                      ),
                     ),
                   ),
                   SizedBox(
@@ -135,16 +143,7 @@ class _ImageUploadState extends State<ImageUpload> {
                           'http://10.0.2.2:8080/${result[0]['image']}')
                       : CircularProgressIndicator(),
                 ]))
-              ],
-            ),
-          ),
-        ],
-      ),
-    );
+          ],
+        ));
   }
-
-  Widget buildUploadButton() => ButtonWidget(
-        text: 'SUBMIT',
-        onClicked: () {},
-      );
 }

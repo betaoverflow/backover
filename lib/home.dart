@@ -101,7 +101,7 @@ class _HomeState extends State<Home> {
                           blurRadius: 5)
                     ]),
               ),
-              title: Text("Profile"))
+              title: Text("Profiles"))
         ],
       ),
     );
