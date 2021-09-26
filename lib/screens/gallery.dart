@@ -25,7 +25,8 @@ class _GalleryScreenState extends State<GalleryScreen> {
   String titleName;
   List<ImageDetails> backyards;
 
-  _GalleryScreenState({required this.cols, required this.titleName, required this.backyards});
+  _GalleryScreenState(
+      {required this.cols, required this.titleName, required this.backyards});
 
   @override
   Widget build(BuildContext context) {
@@ -57,7 +58,7 @@ class _GalleryScreenState extends State<GalleryScreen> {
                   vertical: 50,
                 ),
                 decoration: BoxDecoration(
-                  color: Colors.green[100],
+                  color: Colors.green[50],
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(60),
                     topRight: Radius.circular(60),
