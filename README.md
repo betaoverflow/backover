@@ -42,7 +42,7 @@ Your appreciation makes us grow and glow up. ⭐
 We built the AR application using ARCore and flutter to take the measurements. The suggestions for the different designs were taken through a form and updated in MongoDB database after approval from the admin. For the admin, we created a Vue application that makes an API call to display all the suggestions and approve the ones fit for the app. Moreover, we built the plant detection model using Keras, Tensorflow and Inception v3. We connected tensorflow lite with dart and this part was coded in Google Colab. Lastly we used Cloudinary to store all our assets on the cloud for better performance of the app.
 
 ## Challenges we ran into 🥺
-
+Being very new to machine learning it was very difficult for to make the plant disease detection model and then connecting it with Flutter. We also faced a lot of issues in making the API calls from the backend in Nodejs to the frontend in Flutter and Vue. 
 
 ## Accomplishments that we're proud of 😎
 Firstly, we were able to learn so much in just one day including an entire tech stack i.e. app development using Flutter. Along with that we made a lot of features that we didn't even think would be possible to do and we had so much fun creating them. But most importantly, we understand the dilema people face while choosing the correct vendor and design from the set of 10 designs for their backyard , and also save those who keeps us alive - plants! . And this is our biggest achievement. It feels great creating something which can actually help someone and make an impact on someone's life.
@@ -67,9 +67,4 @@ Being a group of javascript developers, we tried our hands on Flutter this time.
 
 
 ## What's next for Backover 🔥
-
-
-
-
-
-
+We want to make backover a one-stop solution for backyard. In the future, we would be bringing in vendors, so that if you like the designs you can directly contact the vendors and build your backyard easily. We also want to increase our suggestions database so that we can make an ML model for better and more accurate suggestions on not just the area but criteria like budget, location, landscape, simplicity and so on.
