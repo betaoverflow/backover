@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import "package:image_picker/image_picker.dart";
 import 'package:path/path.dart';
+import 'package:backover/widgets/button.dart';
 
 class ImageUpload extends StatefulWidget {
   @override
@@ -73,28 +74,77 @@ class _ImageUploadState extends State<ImageUpload> {
 
   @override
   Widget build(BuildContext context) {
-    fetch();
     return Scaffold(
-      appBar: AppBar(),
-      body: Column(
-        children: [
-          Text("Select an image"),
-          FlatButton.icon(
-              onPressed: () async => await getImage(),
-              icon: Icon(Icons.upload_file),
-              label: Text("Browse")),
-          SizedBox(
-            height: 20,
+      backgroundColor: Colors.green[50],
+      body: Stack(
+        children: <Widget>[
+          Container(
+            height: 360,
+            decoration: BoxDecoration(
+              color: Colors.green,
+              borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(500.0),
+                  bottomRight: Radius.circular(160.0)),
+            ),
           ),
-          FlatButton.icon(
-              onPressed: () => upload(_image),
-              icon: Icon(Icons.upload_rounded),
-              label: Text("Upload now")),
-          isloaded
-              ? Image.network('http://10.0.2.2:8080/${result[0]['image']}')
-              : CircularProgressIndicator(),
+          Container(
+            margin: const EdgeInsets.only(top: 150),
+            child: Column(
+              children: <Widget>[
+                Padding(
+                  padding: const EdgeInsets.all(9.0),
+                  child: Center(
+                    child: Text(
+                      "Select an Image",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 35,
+                          fontStyle: FontStyle.italic,
+                          fontWeight: FontWeight.w500),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 250,
+                ),
+                SizedBox(
+                    child: Column(children: [
+                  Text(""),
+                  FlatButton.icon(
+                    onPressed: () async => await getImage(),
+                    icon: Icon(
+                      Icons.folder_open_rounded,
+                      size: 60,
+                    ),
+                    label: Text(
+                      'Browse',
+                      textAlign: TextAlign.center,
+                      style:
+                          TextStyle(fontSize: 40, fontWeight: FontWeight.w400),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 120,
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  ButtonWidget(onClicked: () => upload(_image), text: "Upload"),
+                  isloaded
+                      ? Image.network(
+                          'http://10.0.2.2:8080/${result[0]['image']}')
+                      : CircularProgressIndicator(),
+                ]))
+              ],
+            ),
+          ),
         ],
       ),
     );
   }
+
+  Widget buildUploadButton() => ButtonWidget(
+        text: 'SUBMIT',
+        onClicked: () {},
+      );
 }

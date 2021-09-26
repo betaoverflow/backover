@@ -43,7 +43,8 @@ class _GalleryScreenState extends State<GalleryScreen> {
               "$titleName",
               style: TextStyle(
                 fontSize: 35,
-                fontWeight: FontWeight.w900,
+                fontStyle: FontStyle.italic,
+                fontWeight: FontWeight.w500,
                 color: Colors.white,
               ),
               textAlign: TextAlign.center,
