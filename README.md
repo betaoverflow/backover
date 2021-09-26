@@ -74,3 +74,6 @@ Being a group of javascript developers, we tried our hands on Flutter this time.
 
 ## What's next for Backover 🔥
 We want to make Backover a one-stop solution for the backyard. In the future, we would be bringing in vendors, so that if you like the designs you can directly contact the vendors and build your backyard easily. We also want to increase our suggestions database so that we can make an ML model for better and more accurate suggestions on not just the area but criteria like budget, location, landscape, simplicity, and so on.
+
+![image](https://user-images.githubusercontent.com/67703407/134821769-aa46aa1d-1b70-4775-b9a0-5dd683161278.png)
+
