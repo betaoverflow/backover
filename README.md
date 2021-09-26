@@ -9,7 +9,7 @@
 </p>
 
 ## What is it? ⛹️‍♂️
-
+Backover is a combination of two key features in a backyard - Building a pretty backyard and maintaining it. So, first we have an easy to use AR application, where you can take a picture of your backyard. Backover will calculate the area of your backyard and give you design suggestions based on your garden. You can also view our gallery where people who love their garden have uploaded their photos for the world to see. Well after using our app, we're sure, your backyard photo will come up in no time. Next, we have a plant disease detection system to help you maintain your garden. Just click a picture and find out if there is any issue. If there is, don't worry we'll also be giving you a solution along with it!
 
 
 [![Starware](https://img.shields.io/badge/⭐-Starware-f5a91a?labelColor=black)](https://github.com/zepfietje/starware)
