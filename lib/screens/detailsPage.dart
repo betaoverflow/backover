@@ -23,37 +23,38 @@ class DetailsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        child: Column(
-          children: <Widget>[
-            Expanded(
-              child: Hero(
-                tag: 'logo$index',
-                child: Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.only(
-                        bottomLeft: Radius.circular(30),
-                        bottomRight: Radius.circular(30)),
-                    image: DecorationImage(
-                      image: AssetImage(imagePath),
-                      fit: BoxFit.cover,
-                    ),
+      body: Column(
+        children: <Widget>[
+          const SizedBox(),
+          Expanded(
+            child: Hero(
+              tag: 'logo$index',
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(40),
+                      bottomRight: Radius.circular(40)),
+                  image: DecorationImage(
+                    fit: BoxFit.cover,
+                    image: AssetImage(imagePath),
                   ),
                 ),
               ),
             ),
-            Container(
-              height: 260,
-              child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: <Widget>[
-                    Padding(
-                      padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          Text(
+          ),
+          Container(
+            height: 320,
+            child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Center(
+                          child: Text(
                             title,
                             style: TextStyle(
                               color: Colors.green,
@@ -61,61 +62,106 @@ class DetailsPage extends StatelessWidget {
                               fontWeight: FontWeight.w600,
                             ),
                           ),
-                          Text(
-                            'By $photographer',
-                            style: TextStyle(
-                              fontSize: 10,
-                            ),
-                          ),
-                          Text(
-                            price,
-                            style: TextStyle(
-                              color: Colors.green,
-                              fontSize: 18,
-                              fontWeight: FontWeight.w400,
-                            ),
-                          ),
-                          Text(
-                            "Area: $area sq. ft",
-                            style: TextStyle(
-                              color: Colors.green,
-                              fontSize: 18,
-                              fontWeight: FontWeight.w400,
-                            ),
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Text(
-                            details,
-                            style: TextStyle(
-                              fontSize: 14,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Row(
-                      children: <Widget>[
-                        Expanded(child: Center(child: buildBackButton())),
-                        SizedBox(
-                          width: 15,
                         ),
-                        Expanded(child: Center(child: buildContactButton())),
+                        SizedBox(height: 20),
+                        Center(
+                            child: SizedBox(
+                          height: 40,
+                          width: 300,
+                          child: TextButton.icon(
+                            style: TextButton.styleFrom(
+                              textStyle: TextStyle(
+                                  color: Colors.green,
+                                  fontWeight: FontWeight.w500),
+                              backgroundColor: Colors.green.shade50,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(24.0),
+                              ),
+                            ),
+                            onPressed: () => {},
+                            icon: Icon(
+                              Icons.camera_alt_outlined,
+                              color: Colors.green,
+                            ),
+                            label: Text(
+                              'By $photographer',
+                              style: TextStyle(
+                                color: Colors.black,
+                              ),
+                            ),
+                          ),
+                        )),
+                        SizedBox(height: 10),
+                        Center(
+                          child: SizedBox(
+                            height: 40,
+                            width: 300,
+                            child: TextButton.icon(
+                              style: TextButton.styleFrom(
+                                textStyle: TextStyle(
+                                    color: Colors.green,
+                                    fontWeight: FontWeight.w500),
+                                backgroundColor: Colors.green.shade50,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(24.0),
+                                ),
+                              ),
+                              onPressed: () => {},
+                              icon: Icon(
+                                Icons.landscape_outlined,
+                                color: Colors.green,
+                              ),
+                              label: Text(
+                                "Area: $area sq. ft",
+                                style: TextStyle(
+                                  color: Colors.black,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        SizedBox(height: 10),
+                        Center(
+                          child: SizedBox(
+                            height: 40,
+                            width: 300,
+                            child: TextButton.icon(
+                              style: TextButton.styleFrom(
+                                textStyle: TextStyle(
+                                    color: Colors.green,
+                                    fontWeight: FontWeight.w500),
+                                backgroundColor: Colors.green.shade50,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(24.0),
+                                ),
+                              ),
+                              onPressed: () => {},
+                              icon: Icon(
+                                Icons.attach_money_outlined,
+                                color: Colors.green,
+                              ),
+                              label: Text(
+                                price,
+                                style: TextStyle(
+                                  color: Colors.black,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(height: 30),
+                        Text(
+                          details,
+                          style: TextStyle(
+                              fontSize: 14, fontWeight: FontWeight.w400),
+                        ),
                       ],
                     ),
-                  ]),
-            ),
-          ],
-        ),
+                  ),
+                ]),
+          ),
+        ],
       ),
     );
   }
-
-  Widget buildBackButton() => ButtonWidget(text: 'See More', onClicked: () {});
-
-  Widget buildContactButton() => ButtonWidget(
-        text: 'Contact',
-        onClicked: () {},
-      );
 }
