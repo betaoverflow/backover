@@ -1,6 +1,5 @@
 import 'package:backover/model/images.dart';
 import 'package:flutter/material.dart';
-import 'package:backover/utils/imagePreferences.dart';
 import 'package:backover/screens/detailsPage.dart';
 
 class GalleryScreen extends StatefulWidget {
@@ -67,7 +66,7 @@ class _GalleryScreenState extends State<GalleryScreen> {
                 ),
                 child: GridView.builder(
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: widget.cols,
+                    crossAxisCount: 2,
                     crossAxisSpacing: 10,
                     mainAxisSpacing: 10,
                   ),
