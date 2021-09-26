@@ -80,7 +80,6 @@ class _GalleryScreenState extends State<GalleryScreen> {
                               imagePath: backyards[index].imagePath,
                               location: backyards[index].location,
                               photographer: backyards[index].photographer,
-                              details: backyards[index].details,
                               index: index,
                               area: backyards[index].area,
                             ),
@@ -93,7 +92,7 @@ class _GalleryScreenState extends State<GalleryScreen> {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(15),
                             image: DecorationImage(
-                              image: AssetImage(backyards[index].imagePath),
+                              image: NetworkImage(backyards[index].imagePath),
                               fit: BoxFit.cover,
                             ),
                           ),

@@ -62,17 +62,17 @@ class _HomeState extends State<Home> {
                 color: Colors.green,
               ),
               title: Text("Detect")),
-          BubbleBottomBarItem(
-              backgroundColor: Colors.green,
-              icon: Icon(
-                Icons.snippet_folder_outlined,
-                color: Colors.green,
-              ),
-              activeIcon: Icon(
-                Icons.snippet_folder_sharp,
-                color: Colors.green,
-              ),
-              title: Text("Form")),
+          // BubbleBottomBarItem(
+          //     backgroundColor: Colors.green,
+          //     icon: Icon(
+          //       Icons.snippet_folder_outlined,
+          //       color: Colors.green,
+          //     ),
+          //     activeIcon: Icon(
+          //       Icons.snippet_folder_sharp,
+          //       color: Colors.green,
+          //     ),
+          //     title: Text("Form")),
           BubbleBottomBarItem(
               backgroundColor: Colors.green,
               icon: Icon(

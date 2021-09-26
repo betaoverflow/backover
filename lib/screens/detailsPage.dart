@@ -5,7 +5,6 @@ class DetailsPage extends StatelessWidget {
   final String imagePath;
   final String location;
   final String photographer;
-  final String details;
   final int index;
   final double area;
 
@@ -13,7 +12,6 @@ class DetailsPage extends StatelessWidget {
       {required this.imagePath,
       required this.location,
       required this.photographer,
-      required this.details,
       required this.index,
       required this.area});
 
@@ -34,7 +32,7 @@ class DetailsPage extends StatelessWidget {
                       bottomRight: Radius.circular(40)),
                   image: DecorationImage(
                     fit: BoxFit.cover,
-                    image: AssetImage(imagePath),
+                    image: NetworkImage(imagePath),
                   ),
                 ),
               ),
@@ -137,15 +135,6 @@ class DetailsPage extends StatelessWidget {
                             ),
                           ),
                         ),
-                        const SizedBox(height: 30),
-                        SizedBox(
-                          child: Text(
-                            details,
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                fontSize: 14, fontWeight: FontWeight.w400),
-                          ),
-                        )
                       ],
                     ),
                   ),

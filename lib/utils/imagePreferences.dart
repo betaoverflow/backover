@@ -2,125 +2,77 @@ import 'package:backover/model/images.dart';
 
 List<ImageDetails> images = [
   ImageDetails(
-    imagePath: 'assets/1.jpg',
-    photographer: 'Photograher',
-    location: 'Location',
-    details:
-        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil error aspernatur, sequi inventore eligendi vitae dolorem animi suscipit. Nobis, cumque.',
+    imagePath: 'https://res.cloudinary.com/dguy8qpzi/image/upload/v1632654980/backyard3_ksdo9o.jpg',
+    photographer: 'John Doe',
+    location: 'New york',
     area: 200.0,
   ),
   ImageDetails(
-    imagePath: 'assets/2.jpg',
-    photographer: 'Photographer',
-    location: 'Location',
-    details:
-        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil error aspernatur, sequi inventore eligendi vitae dolorem animi suscipit. Nobis, cumque.',
+    imagePath: 'https://res.cloudinary.com/dguy8qpzi/image/upload/v1632655010/backyard1_ip7ggv.jpg',
+    photographer: 'John Doe',
+    location: 'New york',
     area: 100.0,
   ),
   ImageDetails(
-    imagePath: 'assets/3.jpg',
-    photographer: 'Photographer',
-    location: 'Location',
-    details:
-        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil error aspernatur, sequi inventore eligendi vitae dolorem animi suscipit. Nobis, cumque.',
+    imagePath: 'https://res.cloudinary.com/dguy8qpzi/image/upload/v1632654981/backyard2_ihhiah.jpg',
+    photographer: 'John Doe',
+    location: 'New york',
     area: 500.0,
   ),
   ImageDetails(
-    imagePath: 'assets/1.jpg',
+    imagePath: 'https://res.cloudinary.com/dguy8qpzi/image/upload/v1632654980/backyard4_ypdlay.jpg',
     photographer: 'Photograher',
     location: 'Location',
-    details:
-        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil error aspernatur, sequi inventore eligendi vitae dolorem animi suscipit. Nobis, cumque.',
     area: 60.0,
   ),
   ImageDetails(
-    imagePath: 'assets/2.jpg',
-    photographer: 'Photographer',
-    location: 'Location',
-    details:
-        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil error aspernatur, sequi inventore eligendi vitae dolorem animi suscipit. Nobis, cumque.',
+    imagePath: 'https://res.cloudinary.com/dguy8qpzi/image/upload/v1632654979/backyard5_mctt3v.jpg',
+    photographer: 'John Doe',
+    location: 'New york',
     area: 243.0,
   ),
   ImageDetails(
-    imagePath: 'assets/3.jpg',
-    photographer: 'Photographer',
-    location: 'Location',
-    details:
-        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil error aspernatur, sequi inventore eligendi vitae dolorem animi suscipit. Nobis, cumque.',
+    imagePath: 'https://res.cloudinary.com/dguy8qpzi/image/upload/v1632654978/backyard6_i4vwrw.jpg',
+    photographer: 'John Doe',
+    location: 'New york',
+    area: 100.0,
+  ),
+    ImageDetails(
+    imagePath: 'https://res.cloudinary.com/dguy8qpzi/image/upload/v1632654980/backyard3_ksdo9o.jpg',
+    photographer: 'John Doe',
+    location: 'New york',
+    area: 200.0,
+  ),
+  ImageDetails(
+    imagePath: 'https://res.cloudinary.com/dguy8qpzi/image/upload/v1632655010/backyard1_ip7ggv.jpg',
+    photographer: 'John Doe',
+    location: 'New york',
     area: 100.0,
   ),
   ImageDetails(
-    imagePath: 'assets/1.jpg',
+    imagePath: 'https://res.cloudinary.com/dguy8qpzi/image/upload/v1632654981/backyard2_ihhiah.jpg',
+    photographer: 'John Doe',
+    location: 'New york',
+    area: 500.0,
+  ),
+  ImageDetails(
+    imagePath: 'https://res.cloudinary.com/dguy8qpzi/image/upload/v1632654980/backyard4_ypdlay.jpg',
     photographer: 'Photograher',
     location: 'Location',
-    details:
-        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil error aspernatur, sequi inventore eligendi vitae dolorem animi suscipit. Nobis, cumque.',
-    area: 35.0,
+    area: 20.0,
   ),
   ImageDetails(
-    imagePath: 'assets/2.jpg',
-    photographer: 'Photographer',
-    location: 'Location',
-    details:
-        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil error aspernatur, sequi inventore eligendi vitae dolorem animi suscipit. Nobis, cumque.',
-    area: 25.0,
+    imagePath: 'https://res.cloudinary.com/dguy8qpzi/image/upload/v1632654979/backyard5_mctt3v.jpg',
+    photographer: 'John Doe',
+    location: 'New york',
+    area: 223.0,
   ),
   ImageDetails(
-    imagePath: 'assets/3.jpg',
-    photographer: 'Photographer',
-    location: 'Location',
-    details:
-        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil error aspernatur, sequi inventore eligendi vitae dolorem animi suscipit. Nobis, cumque.',
-    area: 30.0,
-  ),
-  ImageDetails(
-    imagePath: 'assets/1.jpg',
-    photographer: 'Photograher',
-    location: 'Location',
-    details:
-        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil error aspernatur, sequi inventore eligendi vitae dolorem animi suscipit. Nobis, cumque.',
-    area: -1.0,
-  ),
-  ImageDetails(
-    imagePath: 'assets/2.jpg',
-    photographer: 'Photographer',
-    location: 'Location',
-    details:
-        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil error aspernatur, sequi inventore eligendi vitae dolorem animi suscipit. Nobis, cumque.',
-    area: -1.0,
-  ),
-  ImageDetails(
-    imagePath: 'assets/3.jpg',
-    photographer: 'Photographer',
-    location: 'Location',
-    details:
-        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil error aspernatur, sequi inventore eligendi vitae dolorem animi suscipit. Nobis, cumque.',
-    area: -1.0,
-  ),
-  ImageDetails(
-    imagePath: 'assets/1.jpg',
-    photographer: 'Photograher',
-    location: 'Location',
-    details:
-        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil error aspernatur, sequi inventore eligendi vitae dolorem animi suscipit. Nobis, cumque.',
-    area: -1.0,
-  ),
-  ImageDetails(
-    imagePath: 'assets/2.jpg',
-    photographer: 'Photographer',
-    location: 'Location',
-    details:
-        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil error aspernatur, sequi inventore eligendi vitae dolorem animi suscipit. Nobis, cumque.',
-    area: -1.0,
-  ),
-  ImageDetails(
-    imagePath: 'assets/3.jpg',
-    photographer: 'Photographer',
-    location: 'Location',
-    details:
-        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil error aspernatur, sequi inventore eligendi vitae dolorem animi suscipit. Nobis, cumque.',
-    area: -1.0,
-  ),
+    imagePath: 'https://res.cloudinary.com/dguy8qpzi/image/upload/v1632654978/backyard6_i4vwrw.jpg',
+    photographer: 'John Doe',
+    location: 'New york',
+    area: 50.0,
+  )
 ];
 
 List<ImageDetails> suggestedImages = [];
