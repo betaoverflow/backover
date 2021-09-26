@@ -15,11 +15,11 @@ List<OnboardingModel> onboardingContent = [
   OnboardingModel(
       title: 'Get inspired',
       image:
-          'https://res.cloudinary.com/dxmxhyzsy/image/upload/v1632625944/onboard1_okbrrs.png',
+          'https://res.cloudinary.com/dguy8qpzi/image/upload/v1632653808/garden2-removebg-preview_svdhwy.png',
       descp: "Check out designs that will look best on your garden!"),
   OnboardingModel(
       title: 'Keep it beautiful',
       image:
-          'https://res.cloudinary.com/dxmxhyzsy/image/upload/v1632625953/onboard2_jfbnid.png',
+          'https://res.cloudinary.com/dguy8qpzi/image/upload/v1632653384/garden-removebg-preview_ecmpin.png',
       descp: "Maintain the garden with disease detection"),
 ];
