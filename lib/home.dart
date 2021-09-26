@@ -44,11 +44,11 @@ class _HomeState extends State<Home> {
           BubbleBottomBarItem(
               backgroundColor: Colors.green,
               icon: Icon(
-                Icons.dashboard,
+                Icons.home_outlined,
                 color: Colors.green,
               ),
               activeIcon: Icon(
-                Icons.dashboard,
+                Icons.home_rounded,
                 color: Colors.green,
               ),
               title: Text("Home")),
@@ -59,32 +59,32 @@ class _HomeState extends State<Home> {
                 color: Colors.green,
               ),
               activeIcon: Icon(
-                Icons.access_time,
+                Icons.access_time_filled_rounded,
                 color: Colors.green,
               ),
               title: Text("Logs")),
           BubbleBottomBarItem(
               backgroundColor: Colors.green,
               icon: Icon(
-                Icons.folder_open,
+                Icons.snippet_folder_outlined,
                 color: Colors.green,
               ),
               activeIcon: Icon(
-                Icons.folder_open,
+                Icons.snippet_folder_sharp,
                 color: Colors.green,
               ),
               title: Text("Folders")),
           BubbleBottomBarItem(
               backgroundColor: Colors.green,
               icon: Icon(
-                Icons.folder_open,
+                Icons.upload_file,
                 color: Colors.green,
               ),
               activeIcon: Icon(
-                Icons.folder_open,
+                Icons.upload_file_rounded,
                 color: Colors.green,
               ),
-              title: Text("Folders")),
+              title: Text("Upload")),
           BubbleBottomBarItem(
               backgroundColor: Colors.green,
               icon: Container(
