@@ -3,18 +3,16 @@ import 'package:backover/widgets/button.dart';
 
 class DetailsPage extends StatelessWidget {
   final String imagePath;
-  final String title;
+  final String location;
   final String photographer;
-  final String price;
   final String details;
   final int index;
   final double area;
 
   DetailsPage(
       {required this.imagePath,
-      required this.title,
+      required this.location,
       required this.photographer,
-      required this.price,
       required this.details,
       required this.index,
       required this.area});
@@ -43,7 +41,7 @@ class DetailsPage extends StatelessWidget {
             ),
           ),
           Container(
-            height: 320,
+            height: 300,
             child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -53,17 +51,7 @@ class DetailsPage extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        Center(
-                          child: Text(
-                            title,
-                            style: TextStyle(
-                              color: Colors.green,
-                              fontSize: 22,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                        ),
-                        SizedBox(height: 20),
+                        SizedBox(height: 10),
                         Center(
                             child: SizedBox(
                           height: 40,
@@ -137,11 +125,11 @@ class DetailsPage extends StatelessWidget {
                               ),
                               onPressed: () => {},
                               icon: Icon(
-                                Icons.attach_money_outlined,
+                                Icons.place_outlined,
                                 color: Colors.green,
                               ),
                               label: Text(
-                                price,
+                                location,
                                 style: TextStyle(
                                   color: Colors.black,
                                 ),
@@ -150,11 +138,13 @@ class DetailsPage extends StatelessWidget {
                           ),
                         ),
                         const SizedBox(height: 30),
-                        Text(
-                          details,
-                          style: TextStyle(
-                              fontSize: 14, fontWeight: FontWeight.w400),
-                        ),
+                        SizedBox(
+                          child: Text(
+                            details,
+                            style: TextStyle(
+                                fontSize: 14, fontWeight: FontWeight.w400),
+                          ),
+                        )
                       ],
                     ),
                   ),

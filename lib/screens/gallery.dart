@@ -78,9 +78,8 @@ class _GalleryScreenState extends State<GalleryScreen> {
                           MaterialPageRoute(
                             builder: (context) => DetailsPage(
                               imagePath: backyards[index].imagePath,
-                              title: backyards[index].title,
+                              location: backyards[index].location,
                               photographer: backyards[index].photographer,
-                              price: backyards[index].price,
                               details: backyards[index].details,
                               index: index,
                               area: backyards[index].area,
