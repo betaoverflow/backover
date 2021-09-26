@@ -141,6 +141,7 @@ class DetailsPage extends StatelessWidget {
                         SizedBox(
                           child: Text(
                             details,
+                            textAlign: TextAlign.center,
                             style: TextStyle(
                                 fontSize: 14, fontWeight: FontWeight.w400),
                           ),
