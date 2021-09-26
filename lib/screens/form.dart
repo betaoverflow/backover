@@ -52,7 +52,7 @@ class _FormScreenState extends State<FormScreen> {
             TextField(
               controller: _title,
               decoration: InputDecoration(
-                  labelText: 'TITLE ',
+                  labelText: 'AREA ',
                   labelStyle: TextStyle(
                       fontFamily: 'Montserrat',
                       fontWeight: FontWeight.bold,
@@ -64,7 +64,7 @@ class _FormScreenState extends State<FormScreen> {
             TextField(
               controller: _content,
               decoration: InputDecoration(
-                  labelText: 'DESCRIPTION ',
+                  labelText: 'LOCATION ',
                   labelStyle: TextStyle(
                       fontFamily: 'Montserrat',
                       fontWeight: FontWeight.bold,
@@ -75,30 +75,35 @@ class _FormScreenState extends State<FormScreen> {
             const SizedBox(height: 24),
             const SizedBox(height: 10),
             const SizedBox(height: 40),
-            Center(child: buildSubmitButton())
-            /*TextButton(
-              onPressed: () {},
-              child: Container(
-                  height: 40.0,
-                  child: Material(
-                    borderRadius: BorderRadius.circular(20.0),
-                    shadowColor: Colors.deepOrange,
-                    color: Colors.deepOrange,
-                    elevation: 7.0,
-                    child: GestureDetector(
-                      onTap: () {},
-                      child: Center(
-                        child: Text(
-                          'SUBMIT',
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontFamily: 'Montserrat'),
-                        ),
-                      ),
+            Center(
+              child: SizedBox(
+                height: 50,
+                width: 120,
+                child: TextButton.icon(
+                  style: TextButton.styleFrom(
+                    textStyle: TextStyle(
+                        color: Colors.green, fontWeight: FontWeight.w500),
+                    backgroundColor: Colors.green[100],
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(25.0),
                     ),
-                  )),
-            ),*/
+                  ),
+                  onPressed: () {},
+                  icon: Icon(
+                    Icons.folder_open_rounded,
+                    color: Colors.green,
+                  ),
+                  label: Text(
+                    'Browse',
+                    style: TextStyle(
+                      color: Colors.black,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(height: 40),
+            Center(child: buildSubmitButton()),
           ]),
     );
   }

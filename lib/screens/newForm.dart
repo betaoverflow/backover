@@ -104,33 +104,7 @@ class _ImageUploadState extends State<ImageUpload> {
                     ),
                   ),
                   SizedBox(height: 280),
-                  Center(
-                    child: SizedBox(
-                      height: 50,
-                      width: 120,
-                      child: TextButton.icon(
-                        style: TextButton.styleFrom(
-                          textStyle: TextStyle(
-                              color: Colors.green, fontWeight: FontWeight.w500),
-                          backgroundColor: Colors.green[100],
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(25.0),
-                          ),
-                        ),
-                        onPressed: () async => await getImage(),
-                        icon: Icon(
-                          Icons.folder_open_rounded,
-                          color: Colors.green,
-                        ),
-                        label: Text(
-                          'Browse',
-                          style: TextStyle(
-                            color: Colors.black,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
+
                   SizedBox(
                     height: 120,
                   ),

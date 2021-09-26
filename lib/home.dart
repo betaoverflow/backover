@@ -31,7 +31,6 @@ class _HomeState extends State<Home> {
         HomeScreen(),
         DetectorScreen(),
         FormScreen(),
-        ImageUpload(),
         GalleryScreen(cols: 3, titleName: "Gallery", backyards: images)
       ][currentIndex],
       bottomNavigationBar: BubbleBottomBar(
@@ -62,7 +61,7 @@ class _HomeState extends State<Home> {
                 Icons.access_time_filled_rounded,
                 color: Colors.green,
               ),
-              title: Text("Logs")),
+              title: Text("Detector")),
           BubbleBottomBarItem(
               backgroundColor: Colors.green,
               icon: Icon(
@@ -73,18 +72,7 @@ class _HomeState extends State<Home> {
                 Icons.snippet_folder_sharp,
                 color: Colors.green,
               ),
-              title: Text("Folders")),
-          BubbleBottomBarItem(
-              backgroundColor: Colors.green,
-              icon: Icon(
-                Icons.upload_file,
-                color: Colors.green,
-              ),
-              activeIcon: Icon(
-                Icons.upload_file_rounded,
-                color: Colors.green,
-              ),
-              title: Text("Upload")),
+              title: Text("Post")),
           BubbleBottomBarItem(
               backgroundColor: Colors.green,
               icon: Container(
